@@ -1,0 +1,656 @@
+
+
+@font-face {
+    font-family: 'Long Cang';
+    src: url(LongCang-Regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+  margin: 0;
+  font-family: 'Long Cang','Open Sans', sans-serif;
+  background: linear-gradient(#5b0000, #1a0000);
+  overflow-x: hidden;
+}
+
+/* NAVIGATION */
+#navbar {
+  width: 100%;
+  height: 3vh;
+  display: flex;
+  align-items: center;
+  top: 0;
+  z-index: 20;
+  background: transparent;
+}
+
+.nav-container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+
+.logo-text {
+ font-family: 'Long Cang';
+  font-size: 3vw;
+  color: white;
+}
+
+/* LANTERN */
+.nav-lantern {
+  width: 6vw;
+  height: 6vw;
+  min-width: 45px;
+  min-height: 45px;
+}
+
+/* NAV LINKS */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 3vw;
+  
+}
+
+
+.nav-links a {
+  text-decoration: none;
+  color: #e5e5e5;
+  font-size: 1.3vw;
+  transition: 0.3s;
+  font-family:'open sans';
+}
+
+.nav-links a:hover {
+  color: #ffb400;
+}
+
+/* HERO SECTION */
+.hero {
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 12vh;
+  text-align: center;
+  
+    position: relative;
+}
+
+
+
+.hero-title {
+color: #FFF;
+font-family: "Long Cang";
+font-size: 96px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-top: 5px;
+
+}
+
+.hero-subtitle {
+  color: #e5e5e5;
+  font-size: 2vw;
+margin-top:-50px ;
+  font-family: "open san";
+  
+}
+/* Center the whole hero content */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding-top: 5vh;
+    z-index: 5; /* add this */
+    position: relative; /* needed for z-index to work */
+}
+
+
+/* Bowl container */
+.model-container {
+    width: 45vw;      /* makes the bowl big and responsive */
+    max-width: 500px; /* prevents it from becoming too big on big screens */
+    margin-top: -70px;
+}
+
+/* Make the <model-viewer> fill the container */
+.model-container model-viewer {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 3D RAMEN */
+.ramen-3d {
+  width: 65vw;
+  height: 65vh;
+  max-width: 600px;
+  min-width: 200px;
+}
+
+/* GSAP CLIP EFFECT */
+.handwriting {
+  display: inline-block;
+  /* clip-path: inset(0 100% 0 0); */
+}
+
+.entrance-lantern,
+.entrance-ramen,
+.handwriting {
+  transform-origin: center;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .logo-text {
+    font-size: 7vw;
+  }
+
+  .nav-links a {
+    font-size: 1.2vw;
+    
+  }
+
+  .hero-title {
+    font-size: 8vw;
+    padding-bottom: 30px;
+    margin-top: 20px;
+  }
+
+  .hero-subtitle {
+    font-size: 4vw;
+    padding: 0 5vw;
+  }
+
+  .ramen-3d {
+    width: 70vw;
+    height: 40vh;
+  }
+}
+
+
+#why-section {
+    background: #1D0A0A;
+    padding: 0 5vw;
+    display: flex;
+    position: relative;
+    min-height: 70vh;
+}
+
+/* LEFT VERTICAL STRIP */
+.left-strip {
+    width: 10vw;
+    background:#460404;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh 0;
+    margin-top: 0;
+height: 350px;
+
+}
+.vertical-text {
+    color: white;
+    font-family: "Long Cang";
+    font-size: 32px;
+    font-weight: 400;
+    transform: rotate(-90deg);
+    white-space: nowrap;    
+    display: block;
+    width: max-content;      
+    text-align: center;
+}
+
+
+/* CONTENT */
+.why-content {
+    flex: 1;
+    text-align: left;
+    padding-left: 8vw;
+    margin-top: 80px;
+    margin-bottom: 60px;
+}
+
+.why-title {
+    font-family: 'Long Cang';
+font-size: 52px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+    color: white;
+}
+
+.why-description {
+   color: #FFF;
+font-family: "Open Sans";
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+/* FEATURES */
+.features {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6vw;
+    margin-top: 60px;
+}
+
+.feature-item {
+    width: 18vw;
+}
+
+.feature-model {
+    width: 100%;
+    height: 30vh;
+    cursor: pointer;
+}
+
+.feature-label {
+    margin-top: 1vh;
+    color: white;
+    font-family: 'Open Sans';
+    font-size: 2vh;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#kitchen-3d {
+    width: 100%;
+    padding-top: 2vh;  
+    padding-bottom: 2vh;
+    text-align: center;
+    background: #131313;
+}
+
+.kitchen-title {
+color: #FFF;
+font-family: "Long Cang";
+font-size: 96px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+    margin-bottom: 2vh;
+      display: flex;
+    justify-content: center;
+}
+
+.kitchen-sub {
+    font-size: 1.2vw;
+    color: #dcdcdc;
+    max-width: 60vw;
+    margin: 2vh auto 5vh;
+      display: flex;
+    justify-content: center;
+    font-family: 'open sans';
+    
+}
+
+.kitchen-model-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+model-viewer {
+    width: 80vw;
+    height: 60vh;
+    outline: none;
+}
+
+.btnview{
+ display: inline-flex;
+padding: 15px 27px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 24px;
+background: #4F0000;
+}
+/* SECTION */
+#dragon-section {
+    width: 100%;
+    min-height: 100vh;
+    background: #4A0000;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 3 LAYERS */
+.dragon-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url("assets/texture.png");
+    background-size: 60%;
+    opacity: 0.22;
+    z-index: 1;
+}
+
+/* LEFT → */
+.layer-left {
+    animation: scrollRight 35s linear infinite;
+}
+
+/* MIDDLE ← */
+.layer-middle {
+    animation: scrollLeft 45s linear infinite;
+    opacity: 0.18;
+}
+
+/* RIGHT → faster */
+.layer-right {
+    animation: scrollRight 50s linear infinite;
+    opacity: 0.14;
+}
+
+
+/* SCROLL ANIMATIONS */
+@keyframes scrollRight {
+    from { background-position: 0 0; }
+    to { background-position: 2000px 0; }
+}
+
+@keyframes scrollLeft {
+    from { background-position: 0 0; }
+    to { background-position: -2000px 0; }
+}
+
+/* CONTENT CENTERING */
+.dragon-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+}
+
+/* TITLE */
+.dragon-title {
+    font-family: "Long Cang";
+    color: white;
+    font-size: 80px;
+    margin-bottom: 1vh;
+}
+
+/* SUBTITLE */
+.dragon-subtitle {
+    color: #efefef;
+    font-family: "Open Sans";
+    font-size: 22px;
+    margin-bottom: 3vh;
+    margin-top: 8vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+/* DRAGON MODEL */
+.dragon-model-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#dragonModel {
+    width: 80vw;
+    height: 50vh;
+    min-width: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+
+#build-box {
+  background: #131313;
+  padding: 2vh 5vw;
+  color: white;
+}
+
+.box-title {
+  font-family: "Long Cang";
+  font-size: 64px;
+  text-align: center;
+  margin-bottom: 5vh;
+  display: flex;
+  justify-content: center;
+}
+
+.box-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 5vw;
+}
+
+/* 2 columns for ingredients */
+.ingredients-columns {
+  display: flex;
+  gap: 5vw;
+}
+
+/* Each column */
+.ingredient-column {
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+}
+
+/* Ingredient styling */
+.ingredient {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-left: 4vw;
+}
+
+.ing-img {
+width: 140px;
+height: 100px;
+  object-fit: contain;
+}
+
+.ing-label {
+  margin-top: 0.5vh;
+  font-family: 'Open Sans';
+  font-size: 1.1rem;
+  color: white;
+}
+
+/* 3D model styling */
+.noodle-3d-box model-viewer {
+  width: 28vw;
+  height: 75vh;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .box-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .ingredients-columns {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5vw;
+  }
+  .ingredient-column {
+    gap: 3vh;
+  }
+  .noodle-3d-box model-viewer {
+    width: 70vw;
+    height: 40vh;
+    margin-top: 4vh;
+  }
+}
+
+/* FULL SECTION */
+#grab-box {
+    width: 100%;
+    min-height: 70vh;
+    background: #131313;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12vh 0;
+}
+
+/* LIMIT WIDTH OF CONTENT */
+.grab-inner {
+    width: 100%;
+    text-align: center;
+}
+
+/* TEXT */
+.grab-title {
+    font-family: "Long Cang";
+    font-size: 60px;
+    color: white;
+    margin: 0;
+}
+
+.grab-sub {
+    font-family: "Open Sans";
+    font-size: 18px;
+    color: #eaeaea;
+    margin-top: 10px;
+    margin-bottom: 80px;
+}
+
+/* CENTER CONTAINER FOR TEXTURE + MODEL */
+.grab-center-container {
+    width: 100%;
+    height: 45vh;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* TEXTURE UNDER MODEL */
+.texture-layer {
+    position: absolute;
+    width: 100%;
+    height: 60%;
+   background-image: url(assets/tex.png);
+    opacity: 0.3;
+    bottom: 0;
+    border-radius: 10px;
+     background-size: cover;       /* make the image cover the whole area */
+    background-position: center;  /* center it */
+    background-repeat: no-repeat;
+}
+
+/* MODEL */
+.grab-model {
+    width: 60vw;
+    height: 70vh;
+    z-index: 5;
+    margin-top: 40px;
+}
+
+
+/* FOOTER */
+#site-footer {
+    width: 100%;
+    background: #131313;
+    padding-top: 2vh;
+    padding-bottom: 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Written Logo */
+.footer-logo-text {
+    font-family: "Long Cang", cursive;
+    font-size: 96px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 6vh;
+}
+
+.footer-logo-sub{
+  color: #FFF;
+font-family: "Open Sans";
+font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+/* Navigation */
+.footer-nav {
+    list-style: none;
+    display: flex;
+    gap: 3vw;
+    justify-content: center;
+    margin-bottom: 4vh;
+    padding: 0;
+}
+
+.footer-nav li a {
+    text-decoration: none;
+    color: #ffffffd0;
+    font-size: 1.1rem;
+    transition: 0.3s ease;
+    font-family: 'open sans';
+}
+
+.footer-nav li a:hover {
+    color: #ffb76b;
+}
+
+/* Social Icons */
+.footer-links {
+    display: flex;
+    gap: 2.2vw;
+    justify-content: center;
+    margin-bottom: 4vh;
+}
+
+.footer-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.footer-icon:hover {
+    transform: scale(1.15);
+}
+
+/* Copy */
+.footer-copy {
+    color: #ffffff83;
+    font-size: 0.85rem;
+    margin-bottom: 5vh;
+}
+
+/* Bottom texture */
+.footer-bottom-img {
+    width: 100%;
+    margin-top: 0;
+    display: block;
+}
