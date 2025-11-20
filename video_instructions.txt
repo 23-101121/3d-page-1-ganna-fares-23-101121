@@ -1,0 +1,14 @@
+Project Video Submission
+------------------------
+
+Video Title: AR Chicken Project Demo
+Video File: video_screen_rec/vid.mp4git add video_screen_rec/ video_instructions.txt
+
+Description:
+This video demonstrates the following features of the project:
+- AR integration for mobile and tablet
+- Interactive 3D model viewing
+- Navigation and other site functionality
+
+Instructions:
+Open the project in a browser and refer to this video to see a demonstration of the project features.
